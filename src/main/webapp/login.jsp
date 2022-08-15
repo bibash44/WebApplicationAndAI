@@ -9,7 +9,7 @@
 <!-- partial:index.partial.html -->
 <div id="form-wrap">
   <h3>LOGIN</h3>
-  <form id="form">
+  <form id="form" action="login" method="post">
     <p>
       <input type="email" id="email" name="email" placeholder="Email Address" required>
       </p>
@@ -18,7 +18,7 @@
     </p>
    
     <p>
-    <button  class="primary-btn" style="width: 100%; text-align:center;" > Login </button>
+        <button type="submit"  id="btn-login" class="primary-btn" style="width: 100%; text-align:center;" > Login </button>
     </p>
   </form>
   <div id="create-account-wrap">
@@ -31,3 +31,4 @@
 
 
   <jsp:include page="components/footer.jsp"/>
+

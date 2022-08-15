@@ -7,7 +7,7 @@
 <!-- partial:index.partial.html -->
 <div id="form-wrap">
     <h3>REGISTER</h3>
-    <form id="form">
+    <form id="form" method="post" action="register" >
 
         <p>
             <input type="text" id="fname" name="fname" placeholder="First name" required>
@@ -49,7 +49,7 @@
         </p>
 
         <p>
-            <button class="primary-btn" style="width: 100%; text-align:center;"> Register </button>
+            <button type="submit" class="primary-btn" style="width: 100%; text-align:center;"> Register </button>
         </p>
     </form>
     <div id="create-account-wrap">
@@ -60,6 +60,7 @@
 </div>
 <!--form-wrap-->
 <!-- partial -->
+
 
 
 <jsp:include page="components/footer.jsp" />

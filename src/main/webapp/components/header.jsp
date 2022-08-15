@@ -1,3 +1,6 @@
+
+<%@page language="java" session="true" %>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -22,7 +22,7 @@ public class UserDao {
     private Connection connection;
     private final String table = "user";
     
-    public boolean registerUser(String fname, String lname, String email, String phonenumber, String streetaddress, String housenumber, String city, String postcode, String password){
+    public int registerUser(String fname, String lname, String email, String phonenumber, String streetaddress, String housenumber, String city, String postcode, String password){
         try {
             connection= dBConnection.getCOnnectedToDatabase();
             Statement statement= connection.createStatement();
@@ -35,11 +35,11 @@ public class UserDao {
             statement.executeUpdate(sql);
             System.err.println(sql);
             
-            return true;
+            return 1;
         } catch (SQLException ex) {
             Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
              System.err.print(ex);
-            return false;
+            return 0;
         }
         
     }   

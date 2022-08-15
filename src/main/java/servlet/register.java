@@ -5,8 +5,11 @@
 package servlet;
 
 import Dao.UserDao;
+import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.json.Json;
+import javax.json.JsonObject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +17,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import utils.ResponseObject;
 
 /**
  *
@@ -44,13 +48,15 @@ public class register extends HttpServlet {
         String postcode = request.getParameter("postcode");
         String password = request.getParameter("password");
 
-        boolean saveUser = userDao.registerUser(fname, lname, email, phonenumber, streetaddress, housenumber, city, postcode, password);
+        int saveUser = userDao.registerUser(fname, lname, email, phonenumber, streetaddress, housenumber, city, postcode, password);
 
+        
         PrintWriter printWriter = response.getWriter();
-        if (saveUser) {
-            printWriter.println("User registered successfully.");
-        } else {
-            printWriter.println("Failed to register user");
+       
+        if (saveUser==1) {
+            printWriter.write(saveUser +",User registered successfully.");
+        } else if(saveUser==0) {
+            printWriter.write(saveUser +",Failed to register user");
         }
 //        response.sendRedirect(request.getContextPath() + "/register.jsp?success="+saveUser);
 //        if(saveUser){
@@ -59,7 +65,6 @@ public class register extends HttpServlet {
 //        else{
 //            request.setAttribute("unsuccess", "Failed to register user ");
 //        }
-        
 
 //        if (saveUser) {
 //            request.setAttribute("success", "User registered successfully");

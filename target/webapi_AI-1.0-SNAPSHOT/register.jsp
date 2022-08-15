@@ -156,9 +156,24 @@
                     cache: false,
                     type: 'post',
                     success: function (data) {
+                        console.log(data);
+                        var splittedData = data.split(",");
+                        var status = splittedData[0];
+                        var msg = splittedData[1];
+
+                        if (status == "1") {
+                            $('#validation-text').css({ 'color': 'green' })
+                            $('#validation-text').html(msg.toString() + "<a href='./login.jsp'> Continue to login </a>");
+
+                        }
+                        else {
+                            $('#validation-text').css({ 'color': 'red' })
+                            $('#validation-text').html(msg.toString());
+
+                        }
+
                         $('#fname').focus()
-                        $('#validation-text').css({ 'color': 'green' })
-                        $('#validation-text').html(data.toString() + "<a href='./login.jsp'> Continue to login </a>");
+
 
                         $('#fname').val(null);
                         $('#lname').val(null);
@@ -174,7 +189,7 @@
                     },
                     error: function (err) {
                         console.log(err)
-                        $('#validation-text').css({ 'color': 'green' })
+                        $('#validation-text').css({ 'color': 'red' })
                         $('#validation-text').html(err.toString())
                     }
                 })

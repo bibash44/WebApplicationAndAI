@@ -40,7 +40,7 @@ public class register extends HttpServlet {
 
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
-        String email = request.getParameter("email");
+        String email = request.getParameter("email").toLowerCase();
         String phonenumber = request.getParameter("phonenumber");
         String streetaddress = request.getParameter("streetaddress");
         String housenumber = request.getParameter("housenumber");

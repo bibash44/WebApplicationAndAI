@@ -1,6 +1,7 @@
 
 <%@page language="java" session="true" %>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,5 +23,6 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/extra.css">
 </head>
+
 
 <body>

@@ -1205,3 +1205,11 @@ input[type="email"] {
   padding: 10px 0;
   border-radius: 0 0 4px 4px;
 }
+
+
+/* User profile */
+.profile-container{
+  width: 750px;
+  background-color: white;
+  height: 500px;
+}

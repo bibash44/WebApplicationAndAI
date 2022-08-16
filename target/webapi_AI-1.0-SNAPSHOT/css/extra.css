@@ -1207,9 +1207,9 @@ input[type="email"] {
 }
 
 
-/* User profile */
-.profile-container{
-  width: 750px;
-  background-color: white;
-  height: 500px;
+
+.btn-admins{
+  padding: 5px;
+  color: white;
+  text-decoration: none;
 }

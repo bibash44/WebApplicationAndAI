@@ -65,8 +65,8 @@
                       if(usertype=="normal"){
                         window.location='./userprofile.jsp';
                       }
-                      else{
-                        // admin
+                      else  if(usertype=="admin"){
+                        window.location='./adminprofile.jsp';
                       }
 
                         

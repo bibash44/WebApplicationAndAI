@@ -1,6 +1,7 @@
 Database\DBConnection.class
-Model\userModel.class
 servlet\register.class
 utils\ResponseObject.class
 servlet\login.class
 Dao\UserDao.class
+Model\userModel.class
+servlet\additems.class

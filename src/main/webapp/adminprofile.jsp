@@ -95,7 +95,7 @@
                         </p>
                         <br>
                         <p>
-                            <a href=""
+                            <a href="viewallitems"
                                 style="background-color: rgb(0, 60, 128); color: white; padding: 10px; border-radius: 2px;">Edit
                                 items <span> <i class="fa fa-pencil"></i></span></a>
                         </p>

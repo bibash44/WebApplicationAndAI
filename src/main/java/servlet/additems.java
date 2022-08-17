@@ -44,7 +44,7 @@ public class additems extends HttpServlet {
 
         String productname = request.getParameter("productname");
         String cpu = request.getParameter("cpu");
-        String proceessor = request.getParameter("procesor");
+        String processor = request.getParameter("processor");
         String graphics = request.getParameter("graphics");
         String display = request.getParameter("display");
         String connections = request.getParameter("connections");
@@ -62,12 +62,10 @@ public class additems extends HttpServlet {
 
         System.out.println(path);
 
-        if (filename == null) {
-
-        }
+       
         String image = String.valueOf(filename);
 
-        int addItemsResponse = productDao.additems(productname, cpu, proceessor, graphics, display, connections, memory, storage, power, weight, image, category);
+        int addItemsResponse = productDao.additems(productname, cpu, processor, graphics, display, connections, memory, storage, power, weight, image, category);
 
         if (addItemsResponse == 1) {
             response.getWriter().println("1, success");

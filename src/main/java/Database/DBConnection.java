@@ -27,7 +27,7 @@ public class DBConnection {
 //    
     // Initialize all the information regarding
         // Database Connection
-        String dbURL = "jdbc:mysql:// localhost:3306/";
+        String dbURL = "jdbc:mysql://localhost:3306/";
         // Database name to access
         String dbName = "webapi";
         String dbUsername = "root";

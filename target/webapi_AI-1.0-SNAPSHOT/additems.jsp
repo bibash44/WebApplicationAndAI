@@ -95,7 +95,7 @@
                         <div class="col-lg-6">
                             <div class="checkout__input">
                                 <p>Weight (in kg) <span>*</span></p>
-                                <input type="number" name="weight" id="weight" required placeholder="1.5 Kg">
+                                <input type="number" name="weight" id="weight" required placeholder="1 Kg">
                             </div>
                         </div>
                     </div>

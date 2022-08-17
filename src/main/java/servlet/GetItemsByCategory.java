@@ -31,20 +31,23 @@ public class GetItemsByCategory extends HttpServlet {
 
         String category = request.getParameter("category");
         List<ProductModel> responseGettingItems = productDao.getItemsByCategory(category);
-        
+
         for (ProductModel responseGettingItem : responseGettingItems) {
             System.out.println(responseGettingItem.getGraphics());
         }
-//      
+        
+        request.setAttribute("category", category);
         request.setAttribute("itemsdetails", responseGettingItems);
-        if (category.equals("pc")) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("./pc.jsp");
-            dispatcher.forward(request, response);
-        } else if (category.equals("laptop")) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("./laptop.jsp");
-            dispatcher.forward(request, response);
-        }
+        RequestDispatcher dispatcher = request.getRequestDispatcher("./listofitems.jsp");
+        dispatcher.forward(request, response);
 
+//        if (category.equals("pc")) {
+//            RequestDispatcher dispatcher = request.getRequestDispatcher("./pc.jsp");
+//            dispatcher.forward(request, response);
+//        } else if (category.equals("laptop")) {
+//            RequestDispatcher dispatcher = request.getRequestDispatcher("./laptop.jsp");
+//            dispatcher.forward(request, response);
+//        }
     }
 
     @Override

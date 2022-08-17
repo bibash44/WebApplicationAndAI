@@ -73,7 +73,7 @@
                                         </span>
 
                                         <span>
-                                            <a href="getsingleitem?id=<%=productModel.getId()%>" id="btn-edit"
+                                            <a href="getsingleitemforupdate?id=<%=productModel.getId()%>" id="btn-edit"
                                                 style="border: none; background-color: none; color: green;"> <i
                                                     class="fa fa-pencil"></i>
                                             </a>

@@ -23,8 +23,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author Bibash kattel
  */
-@WebServlet(name = "getsingleitem", urlPatterns = {"/getsingleitem"})
-public class GetSingleItem extends HttpServlet {
+@WebServlet(name = "getsingleitemforupdate", urlPatterns = {"/getsingleitemforupdate"})
+public class GetSingleItemForUpdate extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

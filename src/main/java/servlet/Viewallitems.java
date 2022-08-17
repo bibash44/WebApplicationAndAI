@@ -47,46 +47,7 @@ public class Viewallitems extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-//        ProductDao productDao = new ProductDao();
-//
-//        String productname = request.getParameter("productname");
-//        String cpu = request.getParameter("cpu");
-//        String proceessor = request.getParameter("procesor");
-//        String graphics = request.getParameter("graphics");
-//        String display = request.getParameter("display");
-//        String connections = request.getParameter("connections");
-//        String memory = request.getParameter("memory");
-//        String storage = request.getParameter("storage");
-//        String power = request.getParameter("power");
-//        String weight = request.getParameter("weight");
-//        String category = request.getParameter("category");
-//
-//        Part part = request.getPart("image");
-//        String filename = part.getSubmittedFileName();
-//        String path = getServletContext().getRealPath(filename);
-//
-//        part.write(path);
-//
-//        System.out.println(path);
-//
-//        if (filename == null) {
-//
-//        }
-//        String image = String.valueOf(filename);
-//
-//        int addItemsResponse = productDao.additems(productname, cpu, proceessor, graphics, display, connections, memory, storage, power, weight, image, category);
-//
-//        if (addItemsResponse == 1) {
-//            response.getWriter().println("1, success");
-//            RequestDispatcher dispatcher = request.getRequestDispatcher("./adminprofile.jsp");
-//            dispatcher.forward(request, response);
-//        }
-//        else{
-//            response.getWriter().write("0, failed to add product, please try again");
-////            RequestDispatcher dispatcher = request.getRequestDispatcher("./additems.jsp");
-////            dispatcher.forward(request, response);
-//        }
-//
+
     }
 
 }

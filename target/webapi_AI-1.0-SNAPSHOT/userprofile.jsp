@@ -35,57 +35,60 @@
 
         <div id="form-wrap">
             <h3>User Profile</h3>
-            <p></p>
-            <div id="form" style="margin: 2px;">
+            <%if (session.getAttribute("loggedinuserid") !=null) {%>
+                <p></p>
+                <div id="form" style="margin: 2px;">
 
-                <span style="font-weight: bold ;">Name: </span>
-                <span>
-                    <%=fname%>
-                        <%=lname%>
-                </span>
-                <br>
+                    <span style="font-weight: bold ;">Name: </span>
+                    <span>
+                        <%=fname%>
+                            <%=lname%>
+                    </span>
+                    <br>
 
-                <span style="font-weight: bold ;">Email: </span>
-                <span>
-                    <%=email%>
-                </span>
-                <br>
+                    <span style="font-weight: bold ;">Email: </span>
+                    <span>
+                        <%=email%>
+                    </span>
+                    <br>
 
-                <span style="font-weight: bold ;">Phone number: </span>
-                <span>
-                    <%=phonenumber%>
-                </span>
-                <br>
+                    <span style="font-weight: bold ;">Phone number: </span>
+                    <span>
+                        <%=phonenumber%>
+                    </span>
+                    <br>
 
 
-                <span style="font-weight: bold ;">Street address: </span>
-                <span>
-                    <%=streetaddress%>
-                </span>
-                <br>
+                    <span style="font-weight: bold ;">Street address: </span>
+                    <span>
+                        <%=streetaddress%>
+                    </span>
+                    <br>
 
-                <span style="font-weight: bold ;">House number: </span>
-                <span>
-                    <%=housenumber%>
-                </span>
-                <br>
+                    <span style="font-weight: bold ;">House number: </span>
+                    <span>
+                        <%=housenumber%>
+                    </span>
+                    <br>
 
-                <span style="font-weight: bold ;">city: </span>
-                <span>
-                    <%=city%>
-                </span>
-                <br>
+                    <span style="font-weight: bold ;">city: </span>
+                    <span>
+                        <%=city%>
+                    </span>
+                    <br>
 
-                <span style="font-weight: bold ;">post code: </span>
-                <span>
-                    <%=postcode%>
-                </span>
-                
-                
-            </div>
+                    <span style="font-weight: bold ;">post code: </span>
+                    <span>
+                        <%=postcode%>
+                    </span>
 
+
+                </div>
+                <%} else {%>
+                    <a style="width: 100; margin-bottom: 10px;" href="./login.jsp" class="primary-btn">Login to continute</a>
+                    <% } %>
         </div>
-        </div>
+
 
 
         <jsp:include page="components/footer.jsp" />

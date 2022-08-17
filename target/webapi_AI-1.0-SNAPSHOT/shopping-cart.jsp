@@ -1,31 +1,28 @@
-
- <jsp:include page="components/header.jsp">
+<jsp:include page="components/header.jsp">
     <jsp:param name="pagetitle" value="COMPUTER FOR YOU | CART" />
-  </jsp:include>
- 
-    <jsp:include page="components/navbar.jsp"/>
+</jsp:include>
 
-    <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-option">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb__text">
-                        <h4>Shopping Cart</h4>
-                        <div class="breadcrumb__links">
-                            <a href="./index.jsp">Home</a>
-                            <span>Shopping Cart</span>
-                        </div>
-                    </div>
+<jsp:include page="components/navbar.jsp" />
+
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-option">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb__text">
+                    <h4>Your Cart</h4>
+                   
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Breadcrumb Section End -->
+    </div>
+</section>
+<!-- Breadcrumb Section End -->
 
-    <!-- Shopping Cart Section Begin -->
-    <section class="shopping-cart spad">
-        <div class="container">
+<!-- Shopping Cart Section Begin -->
+<section class="shopping-cart spad">
+    <div class="container">
+        <%if (session.getAttribute("loggedinuserid") !=null) {%>
             <div class="row">
                 <div class="col-lg-8">
                     <div class="shopping__cart__table">
@@ -61,14 +58,14 @@
                                         <a href=""><i class="fa fa-close"></i></a>
                                     </td>
                                 </tr>
-                               
+
                             </tbody>
                         </table>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="continue__btn">
-                                
+
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -79,20 +76,30 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                   
+
                     <div class="cart__total">
                         <h6>Cart total</h6>
                         <ul>
-                            <li>Subtotal <span>$ 169.50</span></li>
+                          
                             <li>Total <span>$ 169.50</span></li>
                         </ul>
                         <a href="checkout.jsp" class="primary-btn">Proceed to checkout</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Shopping Cart Section End -->
+            <%} else {%>
+                <div class="row" style="width: 100%;">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-4">
+                        <a style="width: 100;" href="./login.jsp" class="primary-btn">Login to view cart</a>
+                    </div>
+                    <div class="col-lg-4">
+                   
+                </div>
+                <%}%>
+    </div>
+</section>
+<!-- Shopping Cart Section End -->
 
- 
-    <jsp:include page="components/footer.jsp"/>
+
+<jsp:include page="components/footer.jsp" />

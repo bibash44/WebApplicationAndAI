@@ -22,8 +22,9 @@ public class ProductModel {
     private int weight;
     private String image;
     private String category;
+    private String price;
 
-    public ProductModel(int id, String productname, String cpu, String processor, String graphics, String display, String connections, String memory, String storage, String power, int weight, String image, String category) {
+    public ProductModel(int id, String productname, String cpu, String processor, String graphics, String display, String connections, String memory, String storage, String power, int weight, String image, String category, String price) {
         this.id = id;
         this.productname = productname;
         this.cpu = cpu;
@@ -37,9 +38,10 @@ public class ProductModel {
         this.weight = weight;
         this.image = image;
         this.category = category;
+        this.price = price;
     }
-
-  
+    
+    
 
     public int getId() {
         return id;
@@ -144,7 +146,15 @@ public class ProductModel {
     public void setCategory(String category) {
         this.category = category;
     }
-    
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
     
     
 }

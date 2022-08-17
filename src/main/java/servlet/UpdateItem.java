@@ -21,14 +21,14 @@ import javax.servlet.http.Part;
  */
 @WebServlet(name = "updateitem", urlPatterns = {"/updateitem"})
 public class UpdateItem extends HttpServlet {
-
-     @Override
+    
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
         ProductDao productDao = new ProductDao();
         
-        String id=request.getParameter("id");
+        String id = request.getParameter("id");
         String productname = request.getParameter("productname");
         String cpu = request.getParameter("cpu");
         String processor = request.getParameter("processor");
@@ -40,21 +40,16 @@ public class UpdateItem extends HttpServlet {
         String power = request.getParameter("power");
         String weight = request.getParameter("weight");
         String category = request.getParameter("category");
-
-
-        int addItemsResponse = productDao.updateItem(productname, cpu, processor, graphics, display, connections, memory, storage, power, weight, category, id);
-
-        if (addItemsResponse == 1) {
-            response.getWriter().println("1, success");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("./adminprofile.jsp");
-            dispatcher.forward(request, response);
+        String price = request.getParameter("price");
+        
+        int updateItemResponse = productDao.updateItem(productname, cpu, processor, graphics, display, connections, memory, storage, power, weight, category, price, id);
+        
+        if (updateItemResponse == 1) {
+            response.sendRedirect("viewallitems");
+        } else {
+           response.sendRedirect("getsingleitem?id="+id);
         }
-        else{
-            response.getWriter().write("0, failed to add product, please try again");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("./updateitems.jsp");
-            dispatcher.forward(request, response);
-        }
-
+        
     }
-
+    
 }

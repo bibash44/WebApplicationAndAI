@@ -13,121 +13,142 @@
         <div class="container">
 
             <div class="checkout__form">
-                <form action="additems" method="post" enctype="multipart/form-data">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <span id="validation-text"
-                                style="color: red; margin: 5px; font-weight: bold; float: left;"></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="checkout__input">
-                                <p>Product name <span>*</span></p>
-                                <input type="text" name="productname" id="productname"  required placeholder="Eg: Acer Nitro"
-                                    class="checkout__input__add">
+                <%if (session.getAttribute("loggedinuserid") !=null) {%>
+                    <form action="additems" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span id="validation-text"
+                                    style="color: red; margin: 5px; font-weight: bold; float: left;"></span>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="checkout__input">
-                                <p>CPU <span>*</span></p>
-                                <input type="text" name="cpu" id="cpu"
-                                    required placeholder="Eg: Intel Core i5-10300H 2.50 GHz Turbo up to 4.5GHz"
-                                    class="checkout__input__add">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Product name <span>*</span></p>
+                                    <input type="text" name="productname" id="productname" required
+                                        placeholder="Eg: Acer Nitro" class="checkout__input__add">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>CPU <span>*</span></p>
+                                    <input type="text" name="cpu" id="cpu" required
+                                        placeholder="Eg: Intel Core i5-10300H 2.50 GHz Turbo up to 4.5GHz"
+                                        class="checkout__input__add">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="checkout__input">
-                                <p>Processor <span>*</span></p>
-                                <input type="text" name="processor" id="processor" required placeholder="Eg: 4 Core">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Processor <span>*</span></p>
+                                    <input type="text" name="processor" id="processor" required
+                                        placeholder="Eg: 4 Core">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Graphics <span>*</span></p>
+                                    <input type="text" name="graphics" id="graphics" required
+                                        placeholder="Eg: NVIDIA GeForce RTX 2060 with 6GB GDDR6">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="checkout__input">
-                                <p>Graphics <span>*</span></p>
-                                <input type="text" name="graphics" id="graphics"
-                                    required placeholder="Eg: NVIDIA GeForce RTX 2060 with 6GB GDDR6">
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="checkout__input">
-                                <p>Display <span>*</span></p>
-                                <input type="text" name="display" id="display"
-                                    required placeholder="Eg: 15.6 LCD ComfyView In-plane Switching (IPS) Technology Full HD Backlight Technology LED 1920 x 1080 pixels">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Display <span>*</span></p>
+                                    <input type="text" name="display" id="display" required
+                                        placeholder="Eg: 15.6 LCD ComfyView In-plane Switching (IPS) Technology Full HD Backlight Technology LED 1920 x 1080 pixels">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p> Connections <span>*</span></p>
+                                    <input type="text" name="connections" id="connections" required
+                                        placeholder="Eg: LAN USB-C 3.2 Gen 2 HDMI USB 3.0 (with power off charging) 3 x USB 3.0 Headphone/microphone combo jac">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="checkout__input">
-                                <p> Connections <span>*</span></p>
-                                <input type="text" name="connections" id="connections"
-                                    required placeholder="Eg: LAN USB-C 3.2 Gen 2 HDMI USB 3.0 (with power off charging) 3 x USB 3.0 Headphone/microphone combo jac">
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="checkout__input">
-                                <p>Memory <span>*</span></p>
-                                <input type="text" name="memory" id="memory" required placeholder="Eg: 16GB DDR4 2933MHz Memory">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Memory <span>*</span></p>
+                                    <input type="text" name="memory" id="memory" required
+                                        placeholder="Eg: 16GB DDR4 2933MHz Memory">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Storage <span>*</span></p>
+                                    <input type="text" name="storage" id="storage" required
+                                        placeholder="256Gb SSD +1TB HDD">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="checkout__input">
-                                <p>Storage <span>*</span></p>
-                                <input type="text" name="storage" id="storage" required placeholder="256Gb SSD +1TB HDD">
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="checkout__input">
-                                <p>Battery / Power Supply <span>*</span></p>
-                                <input type="text" name="power" id="power" required placeholder="Eg: 180 watt / 330 watt power supply">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Battery / Power Supply <span>*</span></p>
+                                    <input type="text" name="power" id="power" required
+                                        placeholder="Eg: 180 watt / 330 watt power supply">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Weight (in kg) <span>*</span></p>
+                                    <input type="number" name="weight" id="weight" required placeholder="1 Kg">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="checkout__input">
-                                <p>Weight (in kg) <span>*</span></p>
-                                <input type="number" name="weight" id="weight" required placeholder="1 Kg">
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="checkout__input">
-                                <p>Image <span></span></p>
-                                <input type="file" name="image" required id="image" name="image" onchange="displayimage(this)">
-                                <img id="img-display" src="#" alt="your image" width="100px"  />
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Image <span></span></p>
+                                    <input type="file" name="image" required id="image" name="image"
+                                        onchange="displayimage(this)">
+                                    <img id="img-display" src="#" alt="your image" width="100px" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Category <span>*</span></p>
+                                    <select name="category" id="category">
+                                        <option value="pc">PC</option>
+                                        <option value="laptop">Laptop</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="checkout__input">
-                                <p>Category <span>*</span></p>
-                                <select name="category" id="category">
-                                    <option value="pc">PC</option>
-                                    <option value="laptop">Laptop</option>
-                                </select>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="checkout__input">
+                                    <p>Price (in GBP) <span>*</span></p>
+                                    <input type="text" name="price" id="price" required placeholder="&#163;450">
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <!-- <button id="btn-add-items" class="primary-btn" style="width: 100%;"> Add </button> -->
-                            <button type="submit" class="primary-btn" style="width: 100%;"> Add </button>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- <button id="btn-add-items" class="primary-btn" style="width: 100%;"> Add </button> -->
+                                <button type="submit" class="primary-btn" style="width: 100%;"> Add </button>
+                            </div>
                         </div>
-                    </div>
 
-                </form>
+                    </form>
+                    <%} else {%>
+                        <a style="width: 100; margin-bottom: 10px;" href="./login.jsp" class="primary-btn">Login to
+                            continute</a>
+                        <% } %>
             </div>
+
+
         </div>
     </section>
 
@@ -234,7 +255,7 @@
                     console.log('image selected')
 
                 }
-                else{
+                else {
                     console.log('image not selected')
                 }
 

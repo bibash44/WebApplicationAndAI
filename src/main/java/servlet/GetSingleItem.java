@@ -51,6 +51,7 @@ public class GetSingleItem extends HttpServlet {
         singleItemDetails.put("weight", String.valueOf(model.getWeight()));
         singleItemDetails.put("image", String.valueOf(model.getImage()));
         singleItemDetails.put("category", String.valueOf(model.getCategory()));
+        singleItemDetails.put("price", String.valueOf(model.getPrice()));
 
         request.setAttribute("singleitemdetails", singleItemDetails);
         RequestDispatcher dispatcher = request.getRequestDispatcher("updateitems.jsp");

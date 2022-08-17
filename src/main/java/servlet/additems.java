@@ -64,8 +64,9 @@ public class additems extends HttpServlet {
 
        
         String image = String.valueOf(filename);
+        String price = request.getParameter("price");
 
-        int addItemsResponse = productDao.additems(productname, cpu, processor, graphics, display, connections, memory, storage, power, weight, image, category);
+        int addItemsResponse = productDao.additems(productname, cpu, processor, graphics, display, connections, memory, storage, power, weight, image, category, price);
 
         if (addItemsResponse == 1) {
             response.getWriter().println("1, success");

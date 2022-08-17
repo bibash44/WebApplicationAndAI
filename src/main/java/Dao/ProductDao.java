@@ -27,7 +27,7 @@ public class ProductDao {
 
     public int additems(String productname, String cpu, String processor, String graphics, String display,
             String connections, String memory, String storage, String power, String weight, String image,
-            String category) {
+            String category, String price) {
 
         DBConnection dBConnection = new DBConnection();
         Connection connection;
@@ -37,11 +37,11 @@ public class ProductDao {
             Statement statement = connection.createStatement();
 
             String sql = "INSERT INTO " + table
-                    + "(id, productname, cpu, processor, graphics, display, connections, memory, storage, power, weight, image, category)"
+                    + "(id, productname, cpu, processor, graphics, display, connections, memory, storage, power, weight, image, category, price)"
                     + " values(NULL, '" + productname + "', '" + cpu + "', '" + processor + "', '" + graphics + "' , '"
                     + display + "', '"
                     + connections + "', '" + memory + "', '" + storage + "', '" + power + "', '" + weight + "', '"
-                    + image + "', '" + category + "')";
+                    + image + "', '" + category + "', '" + price + "')";
             statement.executeUpdate(sql);
             System.err.println(sql);
 
@@ -80,7 +80,44 @@ public class ProductDao {
                         resultSet.getString("power"),
                         resultSet.getInt("weight"),
                         resultSet.getString("image"),
-                        resultSet.getString("category")));
+                        resultSet.getString("category"),
+                        resultSet.getString("price")
+                ));
+            }
+        } catch (SQLException ex) {
+            System.err.print(ex);
+        }
+        return productModels;
+    }
+
+    public List<ProductModel> getItemsByCategory(String category) {
+        DBConnection dBConnection = new DBConnection();
+        Connection connection;
+        List<ProductModel> productModels = new ArrayList<>();
+        try {
+
+            connection = dBConnection.getCOnnectedToDatabase();
+            String sql = "SELECT * FROM product WHERE category='" + category + "'";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+
+            while (resultSet.next()) {
+
+                productModels.add(new ProductModel(
+                        resultSet.getInt("id"),
+                        resultSet.getString("productname"),
+                        resultSet.getString("cpu"),
+                        resultSet.getString("processor"),
+                        resultSet.getString("graphics"),
+                        resultSet.getString("display"),
+                        resultSet.getString("connections"),
+                        resultSet.getString("memory"),
+                        resultSet.getString("storage"),
+                        resultSet.getString("power"),
+                        resultSet.getInt("weight"),
+                        resultSet.getString("image"),
+                        resultSet.getString("category"),
+                        resultSet.getString("price")));
             }
         } catch (SQLException ex) {
             System.err.print(ex);
@@ -134,7 +171,8 @@ public class ProductDao {
                         resultSet.getString("power"),
                         resultSet.getInt("weight"),
                         resultSet.getString("image"),
-                        resultSet.getString("category"));
+                        resultSet.getString("category"),
+                        resultSet.getString("price"));
             }
 
             return model;
@@ -148,7 +186,7 @@ public class ProductDao {
     }
 
     public int updateItem(String productname, String cpu, String processor, String graphics, String display,
-            String connections, String memory, String storage, String power, String weight, String category, String id) {
+            String connections, String memory, String storage, String power, String weight, String category, String price, String id) {
         DBConnection dBConnection = new DBConnection();
         Connection connection;
 
@@ -158,11 +196,11 @@ public class ProductDao {
 
             String sql = "UPDATE " + table + " SET productname='" + productname + "', cpu='" + cpu + "', processor='"
                     + processor + "',  graphics='" + graphics + "', display='" + display + "', connections='"
-                    + connections + "', memory='" + memory + "', power='" + power + "',weight='" + weight
-                    + "',category='" + category + "' WHERE id='"+id+"'";
-           
-             statement.executeUpdate(sql);
-             System.err.println(sql);
+                    + connections + "', memory='" + memory + "' , storage='" + storage + "', power='" + power + "',weight='" + weight
+                    + "',category='" + category + "' ,price='" + price + "' WHERE id='" + id + "'";
+
+            statement.executeUpdate(sql);
+            System.err.println(sql);
 
             return 1;
         } catch (SQLException ex) {

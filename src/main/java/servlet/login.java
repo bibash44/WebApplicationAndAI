@@ -63,6 +63,8 @@ public class login extends HttpServlet {
             loggedInuserDetails.put("usertype", loggedInUser.getUsertype());
 
             session.setAttribute("userdetails", loggedInuserDetails);
+            session.setAttribute("loggedinuserid", String.valueOf(loggedInUser.getId()));
+           
             printWriter.write("1,Login success," + loggedInUser.getUsertype());
 
 //            RequestDispatcher dispatcher = request.getRequestDispatcher("userprofile.jsp");

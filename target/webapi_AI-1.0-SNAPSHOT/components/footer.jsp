@@ -17,8 +17,8 @@
                     <div class="footer__widget">
                         <h6>Shopping</h6>
                         <ul>
-                            <li><a href="#">PC </a></li>
-                            <li><a href="#">Laptops </a></li>
+                            <li><a href="getitemsbycategory?category=pc">PC </a></li>
+                            <li><a href="getitemsbycategory?category=laptop">Laptops </a></li>
                         </ul>
                     </div>
                 </div>

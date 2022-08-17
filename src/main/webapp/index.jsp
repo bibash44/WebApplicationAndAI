@@ -16,7 +16,7 @@
                                 <h6>Laptop collection </h6>
                                 <h2>Latest arrivals from all brands</h2>
                                 <p>Light weight to carry like your pet </p>
-                                <a href="laptop.jsp" class="primary-btn">Shop now <span class="arrow_right"></span></a>
+                                <a href="getitemsbycategory?category=laptop" class="primary-btn">Shop now <span class="arrow_right"></span></a>
                                 <div class="hero__social">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -36,7 +36,7 @@
                                 <h6>PC Collection</h6>
                                 <h2>Beast in gaming</h2>
                                 <p>Boost your gaming skills </p>
-                                <a href="pc.jsp" class="primary-btn">Shop now <span class="arrow_right"></span></a>
+                                <a href="getitemsbycategory?category=pc" class="primary-btn">Shop now <span class="arrow_right"></span></a>
                                 <div class="hero__social">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>

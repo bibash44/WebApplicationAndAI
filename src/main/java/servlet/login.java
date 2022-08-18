@@ -64,6 +64,7 @@ public class login extends HttpServlet {
 
             session.setAttribute("userdetails", loggedInuserDetails);
             session.setAttribute("loggedinuserid", String.valueOf(loggedInUser.getId()));
+            session.setAttribute("usertype", String.valueOf(loggedInUser.getUsertype()));
            
             printWriter.write("1,Login success," + loggedInUser.getUsertype());
 

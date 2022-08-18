@@ -98,7 +98,7 @@
 
                 if (status == "1") {
                     alert(msg)
-                    // Redirect to cart
+                    window.location='viewcart?userid='+userid
                 } else if (status == "0") {
                     alert(msg)
                 }

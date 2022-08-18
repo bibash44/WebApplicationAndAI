@@ -2568,25 +2568,7 @@ ol {
 	margin-bottom: 20px;
 }
 
-.checkout__input input::-webkit-input-placeholder {
-	color: #b7b7b7;
-}
 
-.checkout__input input::-moz-placeholder {
-	color: #b7b7b7;
-}
-
-.checkout__input input:-ms-input-placeholder {
-	color: #b7b7b7;
-}
-
-.checkout__input input::-ms-input-placeholder {
-	color: #b7b7b7;
-}
-
-.checkout__input input::placeholder {
-	color: #b7b7b7;
-}
 
 .checkout__input__checkbox label {
 	font-size: 15px;
@@ -2821,32 +2803,12 @@ ol {
 .blog__sidebar__item form input {
 	height: 50px;
 	font-size: 15px;
-	color: #444444;
 	padding-left: 20px;
 	border: 1px solid #e1e1e1;
 	width: 100%;
 	margin-bottom: 20px;
 }
 
-.blog__sidebar__item form input::-webkit-input-placeholder {
-	color: #444444;
-}
-
-.blog__sidebar__item form input::-moz-placeholder {
-	color: #444444;
-}
-
-.blog__sidebar__item form input:-ms-input-placeholder {
-	color: #444444;
-}
-
-.blog__sidebar__item form input::-ms-input-placeholder {
-	color: #444444;
-}
-
-.blog__sidebar__item form input::placeholder {
-	color: #444444;
-}
 
 .blog__sidebar__title {
 	text-align: center;
@@ -3168,36 +3130,12 @@ ol {
 	border: 1px solid #e1e1e1;
 	padding-left: 20px;
 	font-size: 15px;
-	color: #b7b7b7;
 	margin-bottom: 30px;
 	-webkit-transition: all, 0.3s;
 	-o-transition: all, 0.3s;
 	transition: all, 0.3s;
 }
 
-.blog__details__comment form input::-webkit-input-placeholder {
-	color: #b7b7b7;
-}
-
-.blog__details__comment form input::-moz-placeholder {
-	color: #b7b7b7;
-}
-
-.blog__details__comment form input:-ms-input-placeholder {
-	color: #b7b7b7;
-}
-
-.blog__details__comment form input::-ms-input-placeholder {
-	color: #b7b7b7;
-}
-
-.blog__details__comment form input::placeholder {
-	color: #b7b7b7;
-}
-
-.blog__details__comment form input:focus {
-	border-color: #000000;
-}
 
 .blog__details__comment form textarea {
 	height: 120px;
@@ -3212,30 +3150,6 @@ ol {
 	-webkit-transition: all, 0.3s;
 	-o-transition: all, 0.3s;
 	transition: all, 0.3s;
-}
-
-.blog__details__comment form textarea::-webkit-input-placeholder {
-	color: #b7b7b7;
-}
-
-.blog__details__comment form textarea::-moz-placeholder {
-	color: #b7b7b7;
-}
-
-.blog__details__comment form textarea:-ms-input-placeholder {
-	color: #b7b7b7;
-}
-
-.blog__details__comment form textarea::-ms-input-placeholder {
-	color: #b7b7b7;
-}
-
-.blog__details__comment form textarea::placeholder {
-	color: #b7b7b7;
-}
-
-.blog__details__comment form textarea:focus {
-	border-color: #000000;
 }
 
 .blog__details__comment form button {
@@ -3361,6 +3275,8 @@ ol {
 	letter-spacing: 4px;
 	padding: 14px 35px;
 }
+
+
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 

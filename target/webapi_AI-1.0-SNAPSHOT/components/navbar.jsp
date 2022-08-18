@@ -66,7 +66,14 @@
                                             </span></a>
                                         <ul class="dropdown">
                                             <li><a href="logout">Logout </a></li>
-
+                                             
+                                             <% if(session.getAttribute("usertype").equals("normal")){
+                                            
+                                            %>
+                                            <li><a href="./userprofile.jsp">Profile </a></li>
+                                            <%} else if (session.getAttribute("usertype").equals("admin")) {%>
+                                                <li><a href="./adminprofile.jsp">Dashboard </a></li>
+                                            <%}%>
                                         </ul>
                                         <%} else {%>
                                     <li><a href="#"><img src="img/icon/register.png" alt=""></a>
@@ -79,11 +86,19 @@
                             </ul>
                         </nav>
                     </div>
-                    <%if (session.getAttribute("loggedinuserid") !=null) {%>
+                    <%if (session.getAttribute("loggedinuserid") !=null && session.getAttribute("usertype").equals("normal")) {%>
                         <div class="col-lg-3 col-md-3">
+                            
                             <div class="header__nav__option">
 
-                                <a href="./shopping-cart.jsp"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+                                <a href="viewcart?userid=<%=session.getAttribute("loggedinuserid")%>"><img
+                                        src="img/icon/cart.png" alt=""> 
+                                    </a>
+
+                                    <a href="vieworders?userid=<%=session.getAttribute("loggedinuserid")%>"><img
+                                        src="img/icon/orders.png" alt=""> 
+                                    </a>
+
 
                             </div>
                         </div>
@@ -94,3 +109,24 @@
             </div>
         </header>
         <!-- Header Section End -->
+
+        <script>
+            function ViewCart(userid) {
+                console.log(userid)
+                $.ajax({
+                    url: 'viewcart',
+                    data: {
+                        'userid': userid
+                    },
+                    type: 'get',
+                    cache: false,
+                    success(data) {
+                        console.log(data)
+                    },
+                    error(err) {
+                        console.log(err)
+                    }
+
+                })
+            } 
+        </script>

@@ -62,7 +62,6 @@ public class additems extends HttpServlet {
 
         System.out.println(path);
 
-       
         String image = String.valueOf(filename);
         String price = request.getParameter("price");
 
@@ -70,11 +69,11 @@ public class additems extends HttpServlet {
 
         if (addItemsResponse == 1) {
             response.getWriter().println("1, success");
+           response.sendRedirect("viewallitems");
+        } else {
+            response.getWriter().write("0, failed to add product, please try again");
             RequestDispatcher dispatcher = request.getRequestDispatcher("./adminprofile.jsp");
             dispatcher.forward(request, response);
-        }
-        else{
-            response.getWriter().write("0, failed to add product, please try again");
 //            RequestDispatcher dispatcher = request.getRequestDispatcher("./additems.jsp");
 //            dispatcher.forward(request, response);
         }

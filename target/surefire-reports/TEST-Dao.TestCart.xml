@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Dao.TestCart" time="0.733" tests="6" errors="0" skipped="0" failures="6">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="18.0.2+9-61"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-18.0.2\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\MSC COMPUTER SCIENCE AT COVENTRY UNIVERSITY\Web application and AI\WEB application\webapi_AI"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="test" value="Dao.TestCart"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\MSC COMPUTER SCIENCE AT COVENTRY UNIVERSITY\Web application and AI\WEB application\webapi_AI"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="18.0.2+9-61"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\BIBASH~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-14\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\NetBeans-14\netbeans\java\maven\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-18.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\Bibash kattel\Documents\flutter\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\MATLAB\R2022a\bin;C:\Program Files\Java\jdk-18.0.2\bin;C:\Program Files\Java\jdk-18.0.2\java.exe;C:\Users\Bibash kattel\AppData\Local\Microsoft\WindowsApps;C:\Users\Bibash kattel\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Bibash kattel\Documents\flutter\bin;C:\Users\Bibash kattel\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Java\jdk1.8.0_202\bin;C:\tools\dart-sdk\bin;C:\Users\Bibash kattel\AppData\Roaming\Pub\Cache\bin;C:\Users\Bibash kattel\AppData\Roaming\npm;;."/>
+    <property name="maven.conf" value="C:\Program Files\NetBeans-14\netbeans\java\maven/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="62.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Program Files\NetBeans-14\netbeans\java\maven\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\Bibash kattel"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="18"/>
+    <property name="user.name" value="Bibash kattel"/>
+    <property name="java.class.path" value="C:\Program Files\NetBeans-14\netbeans\java\maven\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="18"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=Dao.TestCart -Dmaven.ext.class.path=C:\Program Files\NetBeans-14\netbeans\java\maven-nblib\netbeans-eventspy.jar surefire:test"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-18.0.2"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="18.0.2"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\NetBeans-14\netbeans\java\maven"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2022-07-19"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="testGetLoggedInUserOrderDetails" classname="Dao.TestCart" time="0.525">
+    <failure message="expected:&lt;null&gt; but was:&lt;[]&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<null> but was:<[]>
+	at Dao.TestCart.testGetLoggedInUserOrderDetails(TestCart.java:60)
+]]></failure>
+    <system-out><![CDATA[getLoggedInUserOrderDetails
+SELECT C.id, C.productid, C.userid,C.quantity,  P.productname, P.image, P.price  FROM product P INNER JOIN cart C ON C.productid=P.id  WHERE C.ordered='true' AND  C.userid=''
+]]></system-out>
+  </testcase>
+  <testcase name="testPlaceOrder" classname="Dao.TestCart" time="0.005">
+    <failure message="expected:&lt;0&gt; but was:&lt;1&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<0> but was:<1>
+	at Dao.TestCart.testPlaceOrder(TestCart.java:90)
+]]></failure>
+    <system-out><![CDATA[placeOrder
+]]></system-out>
+  </testcase>
+  <testcase name="testGetAllOrdersDetails" classname="Dao.TestCart" time="0.017">
+    <failure message="expected:&lt;null&gt; but was:&lt;[Model.CartProductUserModel@6e4784bc, Model.CartProductUserModel@34b7ac2f, Model.CartProductUserModel@e056f20]&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<null> but was:<[Model.CartProductUserModel@6e4784bc, Model.CartProductUserModel@34b7ac2f, Model.CartProductUserModel@e056f20]>
+	at Dao.TestCart.testGetAllOrdersDetails(TestCart.java:104)
+]]></failure>
+    <system-out><![CDATA[getAllOrdersDetails
+SELECT C.id, C.productid, C.userid, C.quantity,  P.productname, P.image, P.price,  U.fname, U.lname, U.email, U.phonenumber, U.streetaddress, U.housenumber, U.city, U.postcode   FROM cart C LEFT JOIN product P ON C.productid=P.id  LEFT JOIN  user U ON C.userid= U.id WHERE C.ordered='true'
+CARTID :2
+IMAGE :asus_rog_gt_51_1.jpg
+PRICE :1200
+QUANTITY :1
+FNAME :Bibash
+FNAME :ASUS Gaming beast | 2 Years Warranty
+CARTID :5
+IMAGE :maxresdefault.jpg
+PRICE :950
+QUANTITY :2
+FNAME :Roshan
+FNAME :Acer Nitro 5 2021 Intel i5 10Th Gen / RTX 3060 / 8GB RAM / 512 SSD / 15.6" FHD 144Hz display
+CARTID :7
+IMAGE :asus_rog_gt_51_1.jpg
+PRICE :1200
+QUANTITY :1
+FNAME :Bibash
+FNAME :ASUS Gaming beast | 2 Years Warranty
+]]></system-out>
+  </testcase>
+  <testcase name="testRemoveFromCart" classname="Dao.TestCart" time="0.007">
+    <failure message="expected:&lt;0&gt; but was:&lt;1&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<0> but was:<1>
+	at Dao.TestCart.testRemoveFromCart(TestCart.java:75)
+]]></failure>
+    <system-out><![CDATA[removeFromCart
+]]></system-out>
+    <system-err><![CDATA[DELETE FROM cart WHERE id=''
+]]></system-err>
+  </testcase>
+  <testcase name="testAddToCart" classname="Dao.TestCart" time="0.077">
+    <failure message="The test case is a prototype." type="java.lang.AssertionError">java.lang.AssertionError: The test case is a prototype.
+	at Dao.TestCart.testAddToCart(TestCart.java:32)
+</failure>
+    <system-out><![CDATA[addToCart
+]]></system-out>
+    <system-err><![CDATA[Aug 21, 2022 11:16:42 PM Dao.CartDao addToCart
+SEVERE: null
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Incorrect integer value: '' for column `webapi`.`cart`.`productid` at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1337)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2112)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1247)
+	at Dao.CartDao.addToCart(CartDao.java:53)
+	at Dao.TestCart.testAddToCart(TestCart.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Incorrect integer value: '' for column `webapi`.`cart`.`productid` at row 1]]></system-err>
+  </testcase>
+  <testcase name="testGetLoggedInUserCartDetails" classname="Dao.TestCart" time="0.008">
+    <failure message="expected:&lt;null&gt; but was:&lt;[]&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<null> but was:<[]>
+	at Dao.TestCart.testGetLoggedInUserCartDetails(TestCart.java:45)
+]]></failure>
+    <system-out><![CDATA[getLoggedInUserCartDetails
+SELECT C.id, C.productid, C.userid,C.quantity,  P.productname, P.image, P.price  FROM product P INNER JOIN cart C ON C.productid=P.id  WHERE C.ordered='false' AND  C.userid=''
+]]></system-out>
+  </testcase>
+</testsuite>

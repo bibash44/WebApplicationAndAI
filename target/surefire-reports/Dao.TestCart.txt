@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: Dao.TestCart
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 0.733 sec <<< FAILURE! - in Dao.TestCart
+testGetLoggedInUserOrderDetails(Dao.TestCart)  Time elapsed: 0.525 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<null> but was:<[]>
+	at Dao.TestCart.testGetLoggedInUserOrderDetails(TestCart.java:60)
+
+testPlaceOrder(Dao.TestCart)  Time elapsed: 0.005 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<1>
+	at Dao.TestCart.testPlaceOrder(TestCart.java:90)
+
+testGetAllOrdersDetails(Dao.TestCart)  Time elapsed: 0.017 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<null> but was:<[Model.CartProductUserModel@6e4784bc, Model.CartProductUserModel@34b7ac2f, Model.CartProductUserModel@e056f20]>
+	at Dao.TestCart.testGetAllOrdersDetails(TestCart.java:104)
+
+testRemoveFromCart(Dao.TestCart)  Time elapsed: 0.007 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<1>
+	at Dao.TestCart.testRemoveFromCart(TestCart.java:75)
+
+testAddToCart(Dao.TestCart)  Time elapsed: 0.077 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at Dao.TestCart.testAddToCart(TestCart.java:32)
+
+testGetLoggedInUserCartDetails(Dao.TestCart)  Time elapsed: 0.008 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<null> but was:<[]>
+	at Dao.TestCart.testGetLoggedInUserCartDetails(TestCart.java:45)
+

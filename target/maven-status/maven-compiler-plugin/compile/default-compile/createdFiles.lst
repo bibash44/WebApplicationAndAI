@@ -1,10 +1,9 @@
-Database\DBConnection.class
-servlet\register.class
-utils\ResponseObject.class
 Model\ProductModel.class
 servlet\login.class
-Dao\UserDao.class
-Dao\ProductDao.class
 Model\userModel.class
+servlet\register.class
+Dao\ProductDao.class
 servlet\additems.class
-servlet\EditItems.class
+Database\DBConnection.class
+utils\ResponseObject.class
+Dao\UserDao.class

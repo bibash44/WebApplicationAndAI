@@ -25,7 +25,22 @@ public class CartProductUserModel {
     private String city;
     private String postcode;
 
-    public CartProductUserModel(String id, String productid, String userid, String quantity, String productname, String image, String price, String fname, String lname, String email, String phonenumber, String streetaddress, String housenumber, String city, String postcode) {
+    public CartProductUserModel(
+            String id, 
+            String productid,
+            String userid,
+            String quantity,
+            String productname, 
+            String image, 
+            String price, 
+            String fname, 
+            String lname, 
+            String email, 
+            String phonenumber, 
+            String streetaddress,
+            String housenumber,
+            String city,
+            String postcode) {
         this.id = id;
         this.productid = productid;
         this.userid = userid;

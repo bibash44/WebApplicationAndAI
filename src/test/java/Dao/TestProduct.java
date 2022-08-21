@@ -40,8 +40,7 @@ public class TestProduct {
         int expResult = 0;
         int result = instance.additems(productname, cpu, processor, graphics, display, connections, memory, storage, power, weight, image, category, price);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
 
     /**
@@ -54,8 +53,7 @@ public class TestProduct {
         List<ProductModel> expResult = null;
         List<ProductModel> result = instance.getAllItems();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -69,8 +67,7 @@ public class TestProduct {
         List<ProductModel> expResult = null;
         List<ProductModel> result = instance.getItemsByCategory(category);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -84,8 +81,7 @@ public class TestProduct {
         int expResult = 0;
         int result = instance.deleteItem(id);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -99,8 +95,7 @@ public class TestProduct {
         ProductModel expResult = null;
         ProductModel result = instance.getSingleItem(id);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -123,11 +118,10 @@ public class TestProduct {
         String price = "";
         String id = "";
         ProductDao instance = new ProductDao();
-        int expResult = 0;
+        int expResult = 1;
         int result = instance.updateItem(productname, cpu, processor, graphics, display, connections, memory, storage, power, weight, category, price, id);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

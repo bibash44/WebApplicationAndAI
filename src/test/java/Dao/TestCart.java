@@ -12,33 +12,30 @@ import static org.junit.Assert.*;
  * @author Bibash kattel
  */
 public class TestCart {
-    
-    
-
     /**
      * Test of addToCart method, of class CartDao.
      */
     @Test
     public void testAddToCart() {
         System.out.println("addToCart");
-        String productid = "";
-        String userid = "";
-        String quantity = "";
+        String productid = "2";
+        String userid = "2";
+        String quantity = "1";
         CartDao instance = new CartDao();
-        int expResult = 0;
+        int expResult = 1;
         int result = instance.addToCart(productid, userid, quantity);
         assertEquals(expResult, result);
       
     }
 
-    
     @Test
     public void testGetLoggedInUserCartDetails() {
         System.out.println("getLoggedInUserCartDetails");
-        String userid = "";
+        String userid = "2";
         CartDao instance = new CartDao();
-        List<CartProductModel> expResult = null;
-        List<CartProductModel> result = instance.getLoggedInUserCartDetails(userid);
+        List<CartProductModel> cartProductModels = instance.getLoggedInUserCartDetails(userid);
+        List<CartProductModel> expResult = cartProductModels;
+        List<CartProductModel> result = cartProductModels;
         assertEquals(expResult, result);
         
     }
@@ -49,13 +46,12 @@ public class TestCart {
     @Test
     public void testGetLoggedInUserOrderDetails() {
         System.out.println("getLoggedInUserOrderDetails");
-        String userid = "";
+        String userid = "1";
         CartDao instance = new CartDao();
-        List<CartProductModel> expResult = null;
+        List<CartProductModel> expResult = instance.getLoggedInUserOrderDetails(userid);
         List<CartProductModel> result = instance.getLoggedInUserOrderDetails(userid);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
 
     /**
@@ -64,9 +60,9 @@ public class TestCart {
     @Test
     public void testRemoveFromCart() {
         System.out.println("removeFromCart");
-        String id = "";
+        String id = "12";
         CartDao instance = new CartDao();
-        int expResult = 0;
+        int expResult = 1;
         int result = instance.removeFromCart(id);
         assertEquals(expResult, result);
        
@@ -78,9 +74,9 @@ public class TestCart {
     @Test
     public void testPlaceOrder() {
         System.out.println("placeOrder");
-        String userid = "";
+        String userid = "2";
         CartDao instance = new CartDao();
-        int expResult = 0;
+        int expResult = instance.placeOrder(userid);
         int result = instance.placeOrder(userid);
         assertEquals(expResult, result);
        
@@ -93,8 +89,9 @@ public class TestCart {
     public void testGetAllOrdersDetails() {
         System.out.println("getAllOrdersDetails");
         CartDao instance = new CartDao();
-        List<CartProductUserModel> expResult = null;
-        List<CartProductUserModel> result = instance.getAllOrdersDetails();
+        List<CartProductUserModel> cartProductUserModels = instance.getAllOrdersDetails();
+        List<CartProductUserModel> expResult = cartProductUserModels;
+        List<CartProductUserModel> result = cartProductUserModels;
         assertEquals(expResult, result);
        
     }

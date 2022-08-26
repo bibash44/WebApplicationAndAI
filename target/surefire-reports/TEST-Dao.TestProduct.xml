@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Dao.TestCart" time="0.424" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Dao.TestProduct" time="0.408" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="18.0.2+9-61"/>
@@ -14,7 +14,7 @@
     <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="test" value="Dao.TestCart"/>
+    <property name="test" value="Dao.TestProduct"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="E:\MSC COMPUTER SCIENCE AT COVENTRY UNIVERSITY\Web application and AI\WEB application\Web Application and AI"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
@@ -44,7 +44,7 @@
     <property name="java.class.path" value="C:\Program Files\NetBeans-14\netbeans\java\maven\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="18"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=Dao.TestCart -Dmaven.ext.class.path=C:\Program Files\NetBeans-14\netbeans\java\maven-nblib\netbeans-eventspy.jar surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=Dao.TestProduct -Dmaven.ext.class.path=C:\Program Files\NetBeans-14\netbeans\java\maven-nblib\netbeans-eventspy.jar surefire:test"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-18.0.2"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -60,10 +60,10 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testGetLoggedInUserOrderDetails" classname="Dao.TestCart" time="0.32"/>
-  <testcase name="testPlaceOrder" classname="Dao.TestCart" time="0.009"/>
-  <testcase name="testGetAllOrdersDetails" classname="Dao.TestCart" time="0.008"/>
-  <testcase name="testRemoveFromCart" classname="Dao.TestCart" time="0.006"/>
-  <testcase name="testAddToCart" classname="Dao.TestCart" time="0.01"/>
-  <testcase name="testGetLoggedInUserCartDetails" classname="Dao.TestCart" time="0.006"/>
+  <testcase name="testGetSingleItem" classname="Dao.TestProduct" time="0.324"/>
+  <testcase name="testGetAllItems" classname="Dao.TestProduct" time="0.003"/>
+  <testcase name="testUpdateItem" classname="Dao.TestProduct" time="0.005"/>
+  <testcase name="testAdditems" classname="Dao.TestProduct" time="0.008"/>
+  <testcase name="testGetItemsByCategory" classname="Dao.TestProduct" time="0.006"/>
+  <testcase name="testDeleteItem" classname="Dao.TestProduct" time="0.005"/>
 </testsuite>

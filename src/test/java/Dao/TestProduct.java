@@ -1,4 +1,3 @@
-
 package Dao;
 
 import Model.ProductModel;
@@ -15,32 +14,31 @@ import static org.junit.Assert.*;
  * @author Bibash kattel
  */
 public class TestProduct {
-    
-  
+
     /**
      * Test of additems method, of class ProductDao.
      */
     @Test
     public void testAdditems() {
         System.out.println("additems");
-        String productname = "";
-        String cpu = "";
-        String processor = "";
-        String graphics = "";
-        String display = "";
-        String connections = "";
-        String memory = "";
-        String storage = "";
-        String power = "";
-        String weight = "";
-        String image = "";
-        String category = "";
-        String price = "";
+        String productname = "HP pavillion";
+        String cpu = "Intel Core i7-10300H 2.50 GHz Turbo up to 4.5GHz";
+        String processor = "8-Core (quad-core)";
+        String graphics = "NVIDIA GeForce RTX 3060 with 6GB GDDR6";
+        String display = "14-inch IPS display; Full-HD (1920 x 1080 pixels) resolution; 144Hz refresh rate";
+        String connections = "LAN USB-C 3.2 Gen 2 HDMI USB 3.0 (with power off charging) 3 x USB 3.0 Headphone/microphone combo jack";
+        String memory = "8GB DDR4-3200MHz";
+        String storage = "1TB SSD";
+        String power = "140 watt";
+        String weight = "1";
+        String image = "9511600_R_Z001A.jpg";
+        String category = "laptop";
+        String price = "699";
         ProductDao instance = new ProductDao();
-        int expResult = 0;
+        int expResult = 1;
         int result = instance.additems(productname, cpu, processor, graphics, display, connections, memory, storage, power, weight, image, category, price);
         assertEquals(expResult, result);
-       
+
     }
 
     /**
@@ -50,10 +48,11 @@ public class TestProduct {
     public void testGetAllItems() {
         System.out.println("getAllItems");
         ProductDao instance = new ProductDao();
-        List<ProductModel> expResult = null;
-        List<ProductModel> result = instance.getAllItems();
+         List<ProductModel> productModels = instance.getAllItems();
+        List<ProductModel> expResult = productModels;
+        List<ProductModel> result = productModels;
         assertEquals(expResult, result);
-        
+
     }
 
     /**
@@ -62,12 +61,13 @@ public class TestProduct {
     @Test
     public void testGetItemsByCategory() {
         System.out.println("getItemsByCategory");
-        String category = "";
+        String category = "laptop";
         ProductDao instance = new ProductDao();
-        List<ProductModel> expResult = null;
-        List<ProductModel> result = instance.getItemsByCategory(category);
+        List<ProductModel> productModels = instance.getItemsByCategory(category);
+        List<ProductModel> expResult = productModels;
+        List<ProductModel> result = productModels;
         assertEquals(expResult, result);
-        
+
     }
 
     /**
@@ -76,12 +76,12 @@ public class TestProduct {
     @Test
     public void testDeleteItem() {
         System.out.println("deleteItem");
-        int id = 0;
+        int id = 4;
         ProductDao instance = new ProductDao();
-        int expResult = 0;
+        int expResult = 1;
         int result = instance.deleteItem(id);
         assertEquals(expResult, result);
-        
+
     }
 
     /**
@@ -90,12 +90,13 @@ public class TestProduct {
     @Test
     public void testGetSingleItem() {
         System.out.println("getSingleItem");
-        int id = 0;
+        int id = 2;
         ProductDao instance = new ProductDao();
-        ProductModel expResult = null;
-        ProductModel result = instance.getSingleItem(id);
+         ProductModel productModel = instance.getSingleItem(id);
+        ProductModel expResult = productModel;
+        ProductModel result = productModel;
         assertEquals(expResult, result);
-        
+
     }
 
     /**
@@ -104,24 +105,26 @@ public class TestProduct {
     @Test
     public void testUpdateItem() {
         System.out.println("updateItem");
-        String productname = "";
-        String cpu = "";
-        String processor = "";
-        String graphics = "";
-        String display = "";
-        String connections = "";
-        String memory = "";
-        String storage = "";
-        String power = "";
-        String weight = "";
-        String category = "";
-        String price = "";
-        String id = "";
+
+        System.out.println("additems");
+        String productname = "HP pavillion";
+        String cpu = "Intel Core i7-10300H 2.50 GHz Turbo up to 4.5GHz";
+        String processor = "8-Core (quad-core)";
+        String graphics = "NVIDIA GeForce RTX 3060 with 6GB GDDR6";
+        String display = "14-inch IPS display; Full-HD (1920 x 1080 pixels) resolution; 144Hz refresh rate";
+        String connections = "LAN USB-C 3.2 Gen 2 HDMI USB 3.0 (with power off charging) 3 x USB 3.0 Headphone/microphone combo jack";
+        String memory = "8GB DDR4-3200MHz";
+        String storage = "1TB SSD";
+        String power = "140 watt";
+        String weight = "1";
+        String category = "laptop";
+        String price = "699";
+        String id = "3";
         ProductDao instance = new ProductDao();
         int expResult = 1;
         int result = instance.updateItem(productname, cpu, processor, graphics, display, connections, memory, storage, power, weight, category, price, id);
         assertEquals(expResult, result);
-        
+
     }
-    
+
 }

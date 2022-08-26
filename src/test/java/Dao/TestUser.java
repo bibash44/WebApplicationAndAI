@@ -18,23 +18,21 @@ import static org.junit.Assert.*;
  */
 public class TestUser {
     
-   
-
     /**
      * Test of registerUser method, of class UserDao.
      */
     @Test
     public void testRegisterUser() {
         System.out.println("registerUser");
-        String fname = "Bibash";
-        String lname = "Kattel";
-        String email = "testbibash@gmail.com";
+        String fname = "Suman";
+        String lname = "Pokharel";
+        String email = "pokharelsuman@gmail.com";
         String phonenumber = "045632487";
-        String streetaddress = "Sandy Lane";
-        String housenumber = "17";
+        String streetaddress = "Clay Lane";
+        String housenumber = "35";
         String city = "Coventry";
-        String postcode = "cv1";
-        String password = "1234";
+        String postcode = "cv2 3qf";
+        String password = "abcd";
         UserDao instance = new UserDao();
         int expResult = 1;
         int result = instance.registerUser(fname, lname, email, phonenumber, streetaddress, housenumber, city, postcode, password);
